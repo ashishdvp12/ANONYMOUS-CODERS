@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Optional: Reset line on mouse leave from nav area
+    
     document.querySelector('nav').addEventListener('mouseleave', function() {
         slidingLine.style.width = 0;
     });
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         "https://images.unsplash.com/photo-1543253687-c931c8e01820?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNvY2ElMjBjb2xhJTIwcHJvZHVjdHN8ZW58MHx8MHx8fDA%3D",
         "https://media.gettyimages.com/id/458606359/photo/soda-cans-on-an-isolated-white-background.jpg?s=612x612&w=0&k=20&c=zyi5AMymaOvBwNkpVOjIstFcu8IktSvVsxc-O5hlX1Y="
-        // Add more image URLs here
+        
 
 
     ];
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(() => {
         currentIndex = (currentIndex + 1) % images.length;
         changeableImage.src = images[currentIndex];
-    }, 3000); // Change image every 3000 milliseconds (3 seconds)
+    }, 3000); 
 });
 document.addEventListener('DOMContentLoaded', function() {
     const div2 = document.querySelector('.div2');
@@ -57,14 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     setInterval(() => {
-        // Change text
+        
         pTag.textContent = texts[textIndex];
         textIndex = (textIndex + 1) % texts.length;
 
-        // Change gradient
+        
         div2.style.background = gradients[gradientIndex];
         gradientIndex = (gradientIndex + 1) % gradients.length;
-    }, 2000); // Change every 3000 milliseconds (3 seconds)
+    }, 2000); 
 });
 gsap.from(".div2 p", { duration: 3,
      y: -100,
@@ -79,28 +79,28 @@ document.addEventListener('DOMContentLoaded', function() {
         gsap.from(img, {
             scrollTrigger: {
                 trigger: img,
-                start: "top bottom", // Start the animation when the top of the img2 hits the bottom of the viewport
-                end: "bottom top", // End the animation when the bottom of the img2 hits the top of the viewport
-                toggleActions: "play none none reverse", // Play the animation on scroll down and reverse on scroll up
-                markers: true, // Optional: Shows markers for debugging purposes
+                start: "top bottom",
+                end: "bottom top", 
+                toggleActions: "play none none reverse", 
+                markers: true,
             },
-            y: 50, // Start position (moving up 50px)
-            opacity: 0, // Start with an opacity of 0
-            duration: 1, // Duration of the animation
-            ease: "power1.out", // Type of easing
+            y: 50, 
+            opacity: 0, 
+            duration: 1, 
+            ease: "power1.out", 
         });
     });
 });
-// Ensure the DOM is fully loaded before running animations
+
 document.addEventListener('DOMContentLoaded', function() {
-    // GSAP stagger animation on h3 elements within .tagline
+    
     gsap.from(".tagline h3", {
-        duration: 3, // Duration of each animation
-        opacity: 0, // Start from transparent
-        y: 20, // Start 20 pixels down from their final position
-        stagger: 0.5, // Delay of 0.2 seconds between each h3 animation
-       repeat: -1, // Repeat the animation forever
-        ease: "power1.out", // Easing function for the animation
+        duration: 3, 
+        opacity: 0, 
+        y: 20, 
+        stagger: 0.5, 
+       repeat: -1,
+        ease: "power1.out", 
     });
 });
 
